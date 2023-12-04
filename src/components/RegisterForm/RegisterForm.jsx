@@ -45,10 +45,11 @@ const RegisterForm = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form className="form" onSubmit={handleSubmit}>
+      <label className="form__label">
         Username:{" "}
         <input
+        className="form__input"
           value={formData.username}
           onChange={handleChange}
           required
@@ -57,9 +58,10 @@ const RegisterForm = () => {
         />
       </label>
       <br />
-      <label>
+      <label className="form__label">
         Password:{" "}
         <input
+        className="form__input"
           value={formData.password}
           onChange={handleChange}
           required
@@ -68,9 +70,10 @@ const RegisterForm = () => {
         />
       </label>
       <br />
-      <label>
+      <label className="form__label">
         Repeat Password:{" "}
         <input
+        className="form__input"
           value={formData.repeatPassword}
           onChange={handleChange}
           required
@@ -79,7 +82,7 @@ const RegisterForm = () => {
         />
       </label>
       <br />
-      <button>Submit</button>
+      <button className="form__button">Submit</button>
     </form>
   );
 };

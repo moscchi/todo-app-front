@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import { toast } from 'react-toastify';
 import { UserContext } from '../../Context/UserContext';
 import { useNavigate } from 'react-router-dom';
-
+import './styles.css'
 const LoginForm = () => {
     const navigate = useNavigate();
 
@@ -44,10 +44,11 @@ const LoginForm = () => {
         }
       };
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form className='form' onSubmit={handleSubmit}>
+      <label className='form__label'>
         Username:{" "}
         <input
+        className='form__input'
           value={formData.username}
           onChange={handleChange}
           required
@@ -56,9 +57,9 @@ const LoginForm = () => {
         />
       </label>
       <br />
-      <label>
+      <label className='form__label'>
         Password:{" "}
-        <input
+        <input className='form__input'
           value={formData.password}
           onChange={handleChange}
           required
@@ -67,7 +68,7 @@ const LoginForm = () => {
         />
       </label>
       <br />
-      <button>Login</button>
+      <button className='form__button'>Login</button>
     </form>
   )
 }
